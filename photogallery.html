@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Photo Gallery</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            color: #333;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
+            grid-gap: 10px;
+            padding: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+            transition: transform 0.3s ease; /* Smooth hover effect */
+            cursor: pointer; /* Indicate clickability */
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05); /* Slightly enlarge on hover */
+        }
+
+        /* Lightbox Styles (Hidden by default) */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 999; /* Ensure it's on top */
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            margin: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .lightbox .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Sports Photo Gallery</h1>
+
+    <div class="gallery">
+        <img src="https://thumbs.dreamstime.com/b/multi-sport-concept-different-kinds-professional-athletes-illustration-showcasing-variety-sports-athletes-highlighting-351665945.jpg" alt="Sports Image 1">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLx6nAmYv7ZMijgNJCmOVcwqLZki-Wm20Ubw&s" alt="Sports Image 2">
+        <img src="https://t4.ftcdn.net/jpg/02/87/03/99/360_F_287039963_jTkB3wIxJ5BWLuHQnoIqkFJZzLailDEK.jpg" alt="Sports Image 3">
+        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/a1e92d100455535.5f09026f1c3f8.jpg" alt="Sports Image 4">
+        <img src="https://www.tutorialspoint.com/athletics/images/objective_sport.jpg" alt="Sports Image 5">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFe11nCyTy9tbaNXO_Ez5YZI3CGc7K99P2UA&s" alt="Sports Image 5">
+        <img src="https://www.tallengestore.com/cdn/shop/products/Spirit_Of_Sports_-_Digital_Art_-_Running_The_Distance_7fab3ac3-061d-4dc0-b5bd-7fbe73d2de3c.jpg?v=1481900447" alt="Sports Image 6">
+    </div>
+
+    <div class="lightbox">
+        <span class="close">&times;</span>
+        <img src="" alt="Lightbox Image">
+    </div>
+
+   
+</body>
+</html>
